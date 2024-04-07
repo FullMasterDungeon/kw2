@@ -12,7 +12,6 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     private Color transparent = new Color(1, 1, 1, 0);
 
     private Image thisSlotImage;
-
     public TMP_Text thisSlotQuantityText;
 
     public void initialiseSlot()
@@ -45,6 +44,11 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public Item getItem()
     {
         return heldItem;
+    }
+
+    public bool hasItem()
+    {
+        return heldItem ? true : false;
     }
 
     public void updateData()
